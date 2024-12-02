@@ -7,7 +7,7 @@ This tool is provided as is. I don't take any responsibility for any data loss o
 
 ## Usage
 
-1. Go to [Kinorium](https://kinorium.com/user/settings/#backup/) and export your rating.
+1. Go to [Kinorium](https://kinorium.com/user/settings/#backup/) and export your backup file.
 2. You'll receive an email with exported CSV files, download them.
 3. Use this tool to convert CSV files to Letterboxd format. You can export your rating to your personal profile or to a list.
 
