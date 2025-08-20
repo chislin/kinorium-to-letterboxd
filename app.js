@@ -19,10 +19,10 @@ document.getElementById('processFiles').addEventListener('click', async () => {
 
         saveProcessedData(processedData);
 
-        resultMessage.innerHTML = `<p style='color: green;'>Files have been successfully processed and saved!</p>`;
+        resultMessage.innerHTML = `<p style='color: green;'>File has been successfully processed and saved!</p>`;
     } catch (error) {
         console.error(error);
-        resultMessage.innerHTML = `<p style='color: red;'>An error occurred while processing files.</p>`;
+        resultMessage.innerHTML = `<p style='color: red;'>An error occurred while processing the file.</p>`;
     }
 });
 
