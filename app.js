@@ -102,7 +102,15 @@ function saveProcessedData(data) {
  */
 function toCSV(data) {
     const headers = Object.keys(data[0]).join(',');
-    const rows = data.map((item) => Object.values(item).map(value => `"${value}"`).join(','));
+    const rows = data.map((item) =>
+        Object.values(item)
+            .map((value) => {
+                const stringValue = String(value);
+                const escaped = stringValue.replace(/"/g, '""');
+                return /[",\n]/.test(stringValue) ? `"${escaped}"` : escaped;
+            })
+            .join(',')
+    );
 
     return [headers, ...rows].join('\n');
 }
