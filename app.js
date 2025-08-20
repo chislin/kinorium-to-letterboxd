@@ -101,6 +101,10 @@ function saveProcessedData(data) {
  * @returns {string}
  */
 function toCSV(data) {
+    if (data.length === 0) {
+        return '';
+    }
+
     const headers = Object.keys(data[0]).join(',');
     const rows = data.map((item) => Object.values(item).map(value => `"${value}"`).join(','));
 
